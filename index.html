@@ -11,8 +11,24 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-11497801757');
+    </script>
+    <!-- Event snippet for Book appointment conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-11497801757/W-mJCMT6_PcZEJ2Qyuoq',
+            'value': 1.0,
+            'currency': 'USD',
+            'event_callback': callback
+        });
+        return false;
+      }
     </script>
     <!-- Add Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +37,7 @@
     <!-- Add MapLibre -->
     <script src='https://cdn.jsdelivr.net/npm/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
     <link href='https://cdn.jsdelivr.net/npm/maplibre-gl@3.6.2/dist/maplibre-gl.css' rel='stylesheet' />
-    <script type="module" crossorigin src="/assets/index-b4c8d95c.js"></script>
+    <script type="module" crossorigin src="/assets/index-d37551b3.js"></script>
     <link rel="stylesheet" href="/assets/index-6e1d9a35.css">
   </head>
   <body>
