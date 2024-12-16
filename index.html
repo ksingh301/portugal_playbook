@@ -12,23 +12,35 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-11497801757');
+      gtag('config', 'G-1YYBDEFT0W');
+
     </script>
     <!-- Event snippet for Book appointment conversion page -->
     <script>
       window.gtag_report_conversion = function(url) {
         var callback = function () {
-          if (typeof(url) != 'undefined') {
+          if (typeof url !== 'undefined') {
             window.location = url;
           }
         };
+    
+        // Google Ads Conversion Event
         gtag('event', 'conversion', {
-            'send_to': 'AW-11497801757/W-mJCMT6_PcZEJ2Qyuoq',
-            'value': 1.0,
-            'currency': 'USD',
-            'event_callback': callback
+          'send_to': 'AW-11497801757/W-mJCMT6_PcZEJ2Qyuoq',
+          'value': 1.0,
+          'currency': 'USD',
+          'event_callback': callback
         });
+    
+        // GA4 Custom Event
+        gtag('event', 'book_consultation', {
+          'event_category': 'Engagement',
+          'event_label': '30_min_free_consultation',
+          'value': 1.0
+        });
+    
         return false;
-      }
+      };
     </script>
     <!-- Add Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
